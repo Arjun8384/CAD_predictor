@@ -1,6 +1,8 @@
 import streamlit as st
 import numpy as np
 import pickle
+import zipfile
+
 
 # Page config
 st.set_page_config(
@@ -26,8 +28,10 @@ st.sidebar.markdown(
 )
 
 # Load trained model
-with open('rf_cad_model.pkl', 'rb') as f:
-    model = pickle.load(f)
+with zipfile.ZipFile('rf_cad_model.zip', 'r') as zip_ref:
+    with zip_ref.open('rf_cad_model.pkl') as f:
+        model = pickle.load(f)
+
 
 # Main Input Section
 st.subheader("Patient Risk Factors")
