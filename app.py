@@ -1,5 +1,6 @@
 import streamlit as st
 import numpy as np
+import pandas as pd
 import pickle
 import zipfile
 
@@ -60,18 +61,29 @@ smoke_num = 1 if smoke == 'Yes' else 0
 alco_num = 1 if alco == 'Yes' else 0
 active_num = 1 if active == 'Yes' else 0
 
-features = np.array([[
-    age, gender_num, height, weight, ap_hi, ap_lo,
-    chol_num, gluc_num, smoke_num, alco_num, active_num
-]])
+input_dict = {
+    "age": [age],
+    "gender": [gender_num],
+    "height": [height],
+    "weight": [weight],
+    "ap_hi": [ap_hi],
+    "ap_lo": [ap_lo],
+    "cholesterol": [chol_num],
+    "gluc": [gluc_num],
+    "smoke": [smoke_num],
+    "alco": [alco_num],
+    "active": [active_num]
+}
+features_df = pd.DataFrame(input_dict)
+
 
 # Prediction Section
 st.markdown("---")
 st.subheader('Risk Prediction')
 
 if st.button('Predict Risk', help="Click to get your CAD risk!"):
-    proba = model.predict_proba(features)[0,1]
-    pred = model.predict(features)[0]
+    proba = model.predict_proba(features_df)[0,1]
+    pred = model.predict(features_df)[0]
     pred_text = 'CAD Present' if pred == 1 else 'No CAD Risk'
 
     # Display probability as a progress bar
