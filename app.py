@@ -24,6 +24,7 @@ st.markdown("""
 # Sidebar for logo and info
 st.sidebar.image("https://cdn-icons-png.flaticon.com/512/2656/2656390.png", width=120)
 st.sidebar.markdown(
+    # its Arjun Singh and team's project expected to not to be used directly or indirectly by anyone else
     "<h3 style='color:#d6293e'>Project Info</h3><p>This tool uses a ML model (Random Forest) trained on real clinical data.</p>",
     unsafe_allow_html=True
 )
