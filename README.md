@@ -1,6 +1,6 @@
 # Cardiovascular Disease Risk Predictor
 
-A machine learning web application for predicting the risk of coronary artery (CAD) and cardiovascular disease. Built with Streamlit and a Random Forest model trained on a large-scale dataset.
+A machine learning web application for predicting the risk of coronary artery (CAD) and cardiovascular disease. Built with Streamlit and a XGBoost model trained on a large-scale dataset.
 
 ## Features
 
@@ -48,12 +48,12 @@ See “Deployment” section for details.
 
 ## Files
 
-| File                              | Purpose                                      |
+| File                               | Purpose                                      |
 |------------------------------------|----------------------------------------------|
-| app.py                            | Streamlit web app source                     |
-| rf_cad_model.pkl                   | Trained Random Forest model for prediction   |
+| app.py                             | Streamlit web app source                     |
+| xgb_cad_model.pkl                  | Trained XGBoost model for prediction         |
 | cardiovascular_disease_cleaned.csv | Cleaned dataset used for training/testing    |
-| requirements.txt                   | Python dependencies                         |
+| requirements.txt                   | Python dependencies                          |
 
 ## Model
 
