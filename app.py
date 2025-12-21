@@ -28,7 +28,7 @@ st.markdown("""
 st.sidebar.image("https://cdn-icons-png.flaticon.com/512/2656/2656390.png", width=120)
 st.sidebar.markdown(
     # its Arjun Singh and team's project expected to not to be used directly or indirectly by anyone else
-    "<h3 style='color:#d6293e'>Project Info</h3><p>This tool uses a ML model (Random Forest) trained on real clinical data.</p>",
+    "<h3 style='color:#d6293e'>Project Info</h3><p>This tool uses a ML model (XGBoost) trained on real clinical data.</p>",
     unsafe_allow_html=True
 )
 
@@ -109,4 +109,4 @@ if st.button('Predict Risk', help="Click to get your CAD risk!"):
 
 # Footer
 st.markdown("---")
-st.markdown("<center><sub>Powered by Random Forest ML & Streamlit | Designed for CAD risk prediction</sub></center>", unsafe_allow_html=True)
+st.markdown("<center><sub>Powered by XGBoost ML & Streamlit | Designed for CAD risk prediction</sub></center>", unsafe_allow_html=True)
