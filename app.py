@@ -30,9 +30,8 @@ st.sidebar.markdown(
 )
 
 # Load trained model
-with zipfile.ZipFile('rf_cad_model.zip', 'r') as zip_ref:
-    with zip_ref.open('rf_cad_model.pkl') as f:
-        model = pickle.load(f)
+with open('xgb_cad_model.pkl', 'rb') as f:
+    model = pickle.load(f)
 
 
 # Main Input Section
