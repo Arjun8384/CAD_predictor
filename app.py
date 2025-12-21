@@ -1,3 +1,6 @@
+# web link for the app
+# https://cadpredictor-novaheart.streamlit.app/
+
 import streamlit as st
 import numpy as np
 import pandas as pd
@@ -32,6 +35,10 @@ st.sidebar.markdown(
 # Load trained model
 with open('xgb_cad_model.pkl', 'rb') as f:
     model = pickle.load(f)
+
+#with zipfile.ZipFile('rf_cad_model.zip', 'r') as zip_ref:        # uncomment to load random-forest trained model
+#    with zip_ref.open('rf_cad_model.pkl') as f:
+#        model = pickle.load(f)
 
 
 # Main Input Section
